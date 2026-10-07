@@ -77,12 +77,23 @@ function submitGuess() {
         );
     }
 
+    // 🔥 PLACE IT RIGHT HERE 🔥
+    // If multiple aircraft match the partial input, ask for more detail
+    const matches = aircraftDB.filter(a => a.name.toLowerCase().includes(input));
+    if (matches.length > 1) {
+        document.getElementById("feedback").innerHTML =
+            "<p class='wrong'>Too many matches — be more specific!</p>";
+        return;
+    }
+
+    // If still no match, show invalid
     if (!guess) {
         document.getElementById("feedback").innerHTML =
             "<p class='wrong'>Invalid aircraft name.</p>";
         return;
     }
 
+    // Normal feedback
     const fb = compare(guess, secret);
 
     document.getElementById("feedback").innerHTML = `
@@ -96,6 +107,7 @@ function submitGuess() {
         location.reload();
     }
 }
+
 
 
 function compare(guess, secret) {
