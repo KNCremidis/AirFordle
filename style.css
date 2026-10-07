@@ -1,9 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: #1a1a1a;
-    color: white;
+    background: #0b1a2f;
+    color: #e0e0e0;
     text-align: center;
     padding: 20px;
+}
+
+h1 {
+    color: #4caf50;
 }
 
 input {
@@ -24,21 +28,10 @@ button {
     font-size: 20px;
 }
 
-.correct {
-    color: #4caf50;
-}
-
-.higher {
-    color: #2196f3;
-}
-
-.lower {
-    color: #f44336;
-}
-
-.wrong {
-    color: #ff9800;
-}
+.correct { color: #4caf50; }
+.higher { color: #2196f3; }
+.lower { color: #f44336; }
+.wrong { color: #ff9800; }
 
 ul {
     list-style: none;
