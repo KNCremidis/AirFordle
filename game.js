@@ -65,8 +65,17 @@ window.onload = () => {
 };
 
 function submitGuess() {
-    const input = document.getElementById("guessInput").value.trim();
-    const guess = aircraftDB.find(a => a.name.toLowerCase() === input.toLowerCase());
+    const input = document.getElementById("guessInput").value.trim().toLowerCase();
+
+    // Try to find an exact match first
+    let guess = aircraftDB.find(a => a.name.toLowerCase() === input);
+
+    // If no exact match, look for partial matches (like "Raptor" or "F-22")
+    if (!guess) {
+        guess = aircraftDB.find(a => 
+            a.name.toLowerCase().includes(input)
+        );
+    }
 
     if (!guess) {
         document.getElementById("feedback").innerHTML =
@@ -87,6 +96,7 @@ function submitGuess() {
         location.reload();
     }
 }
+
 
 function compare(guess, secret) {
     let fb = {};
