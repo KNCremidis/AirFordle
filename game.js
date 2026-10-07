@@ -1,3 +1,5 @@
+console.log("AirFordle JS loaded!");
+
 const aircraftDB = [
     {name:"F-22 Raptor", type:"Fighter", year:2005, speed:2.25},
     {name:"F-35 Lightning II", type:"Multirole", year:2015, speed:1.6},
