@@ -8,12 +8,20 @@ body {
 
 h1 {
     color: #4caf50;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
 }
 
 input {
     padding: 10px;
     width: 250px;
     font-size: 16px;
+    border-radius: 5px;
+    border: none;
 }
 
 button {
@@ -21,19 +29,44 @@ button {
     font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50;
+    color: white;
+}
+
+button:hover {
+    background: #45a049;
 }
 
 #feedback {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
-.correct { color: #4caf50; }
-.higher { color: #2196f3; }
-.lower { color: #f44336; }
-.wrong { color: #ff9800; }
+.correct {
+    color: #4caf50;
+}
+
+.higher {
+    color: #2196f3;
+}
+
+.lower {
+    color: #f44336;
+}
+
+.wrong {
+    color: #ff9800;
+}
 
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    font-size: 16px;
+    margin: 4px 0;
 }
